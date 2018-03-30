@@ -9,16 +9,15 @@ html
         nav.navbar.navbar-expand-md.navbar-dark.bg-primary
             a.navbar-brand.abs(href='/')
                 img(src="favicon.ico")
-                |&nbsp; &nbsp;Меню
+                | &nbsp; &nbsp;Меню
             button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsingNavbar')
                 span.navbar-toggler-icon
             #collapsingNavbar.navbar-collapse.collapse
                 ul.navbar-nav
                     li.nav-item.active
                         a.nav-link(href='/content1', ) Меню 1
-
                     li.nav-item.active
-                        a.nav-link(href='/content2') Меню 2
+                        a.nav-link(href='/content1') Меню 2
                     if user
                         li.nav-item.active
                             a.nav-link(href='/content1', data-toggle='collapse') Меню 3
@@ -33,9 +32,8 @@ html
                         li.nav-item.active
                             a.nav-link(href='/signup', data-target='#myModal', data-toggle='modal') Регистрация
                     else
-
                         li.nav-item
-                            a.nav-link(href='/Home', data-target='#myModal', data-toggle='modal') #{user.username}
+                            a.nav-link(href='/Home', data-target='#myModal', data-toggle='modal') Пользователь:&nbsp; #{user.username}
                         li.nav-item
                             a.nav-link(href='/signout', data-target='#myModal', data-toggle='modal') Выход
 
