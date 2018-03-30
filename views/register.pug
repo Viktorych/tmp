@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			.col-md-4.offset-md-4
+				h3.pb-3.mb-4.font-italic.border-bottom.text-center Регистрационные данные
+				p
+				div.signup-wall                                                                                                        	
+					form(class='form-signin', action='/signup', method='POST')                                                         	
+						input(type='text', name='username', class='form-control', placeholder='Имя пользователя',required, autofocus)  	
+						input(type='password', name='password', class='form-control nomargin', placeholder='Пароль', required)         	
+						input(type='email', name='email', class='form-control', placeholder='Email',required)                          	
+						input(type='text', name='firstName', class='form-control', placeholder='Имя',required)
+
+						input(type='text', name='lastName', class='form-control', placeholder='Фамилия',required)
+						p 
+						button(class='btn btn-lg btn-primary btn-block', type='submit') Регистрация                                    	
+						span.clearfix
+						p
+				#message                                                                                                               	
+					if message                                                                                                         	
+						h1.text-center.error-message #{message}

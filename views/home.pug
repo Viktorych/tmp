@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			.col-md-8.offset-md-2
+				#user
+					h3.pb-3.mb-4.font-italic.border-bottom Добро пожаловать #{user.firstName}. ваши регистрационные данные :
+					div.signup-wall
+					ul.user-details
+						li Имя пользователя   ---> #{user.username}
+						li Email              ---> #{user.email}
+						li Имя ---> #{user.firstName}
+						li Фамилия  ---> #{user.lastName}
+						li Пароль  ---> #{user.password}
+					a(href='/signout', class='text-center new-account') Выход

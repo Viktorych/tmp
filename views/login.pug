@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    main.container(role='main')
+        .row
+            .col-md-4.offset-md-4
+                h3.pb-3.mb-4.font-italic.border-bottom.text-center
+                    | Вход в систему
+                    p
+                div.account-wall
+                    img(class ="mx-auto d-block",width="256", height="256", src='/images/login/login.png')
+                    form(class='form-signin', action='/login', method='POST')
+                        input(type='text', name='username' class='form-control', placeholder='Пользователь',required, autofocus)
+                        input(type='password', name='password' class='form-control', placeholder='Пароль', required)
+                        p
+                        button(class='btn btn-lg btn-primary btn-block', type='submit') Войти в систему.
+                        span.clearfix
+                    p
+                        //a(href='/signup', class='text-center new-account') Создать учетную запись.
+                #message
+                    if message
+                        h1.text-center.error-message  #{message}
+    //extends footer
