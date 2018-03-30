@@ -8,13 +8,16 @@ block content
                     |О программе
                 p.text-left
                         |Шаблон информационной ситемы
-                p.text-left
-                        |Возможности:
-                ul
-                    li База данных Mongodb;
-                    li Аутентификация пользователей Passport js;
-                    li CSS Bootstrap;
-                    li Меню;
-                    li Контент;
+                - var n = 0;
+                    while n < 10
+                        p.text-left
+                                |Возможности:
+                        ul
+                            li База данных Mongodb;
+                            li Аутентификация пользователей Passport js;
+                            li CSS Bootstrap;
+                            li Меню;
+                            li Контент;
+                        - n++
 
     //extends footer
